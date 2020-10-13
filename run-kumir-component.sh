@@ -6,7 +6,7 @@ mkdir -p Kumir
 setfacl -m kumir:1000:r ${HOME}/.Xauthority
 setfacl -m kumir:1000:rw ${PWD}/Kumir
 
-VER="2.1.0"
+        VER="latest"
 
 exec docker run \
     -it \
@@ -18,4 +18,4 @@ exec docker run \
     -v ${HOME}/.Xauthority:/home/kumir/.Xauthority \
     -v ${PWD}/Kumir:/home/kumir/Kumir \
     vitalyrepin/kumir:${VER} \
-    "Kumir/bin/$@"
+    "/opt/kumir/bin/$@"

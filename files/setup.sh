@@ -14,8 +14,8 @@ apt-get install -y curl
 curl -k -O https://www.niisi.ru/kumir/${TGZ}
 
 # Unpack to Kumir instead of brain-damaged path found in the tarball
-mkdir Kumir
-tar -C Kumir --strip-components=1 -xzf ${TGZ}
+mkdir /opt/kumir
+tar -C /opt/kumir --strip-components=1 -xzf ${TGZ}
 rm ${TGZ}
 
 # To decrease image size

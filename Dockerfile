@@ -7,4 +7,4 @@ RUN rm -f /setup.sh
 ENV DISPLAY :0
 USER kumir
 
-CMD ["/bin/sh", "-c", "$0 \"$@\"", "./Kumir/bin/kumir2-ide"]
+CMD ["/bin/sh", "-c", "$0 \"$@\"", "/opt/kumir/bin/kumir2-ide"]
