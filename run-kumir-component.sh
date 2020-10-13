@@ -6,6 +6,8 @@ mkdir -p Kumir
 setfacl -m kumir:1000:r ${HOME}/.Xauthority
 setfacl -m kumir:1000:rw ${PWD}/Kumir
 
+VER="2.1.0"
+
 exec docker run \
     -it \
     --rm \
@@ -15,5 +17,5 @@ exec docker run \
     --env QT_X11_NO_MITSHM=1 \
     -v ${HOME}/.Xauthority:/home/kumir/.Xauthority \
     -v ${PWD}/Kumir:/home/kumir/Kumir \
-    kumir-app  \
+    vitalyrepin/kumir:${VER} \
     "Kumir/bin/$@"

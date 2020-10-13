@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t kumir-app .
+docker build -t vitalyrepin/kumir:2.1.0 .
 
