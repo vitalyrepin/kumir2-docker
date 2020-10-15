@@ -2,11 +2,13 @@
 
 # Create Kumir directory if it does not exist
 mkdir -p Kumir
+# Grant access to everybody
+chmod 777 Kumir
 
 setfacl -m kumir:1000:r ${HOME}/.Xauthority
 setfacl -m kumir:1000:rw ${PWD}/Kumir
 
-        VER="latest"
+VER="latest"
 
 exec docker run \
     -it \
