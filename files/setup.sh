@@ -8,6 +8,7 @@ apt-get install -y x11-apps
 useradd -ms /bin/bash kumir
 mkdir /home/kumir/Kumir
 chown kumir /home/kumir/Kumir
+        chmod 777 /home/kumir/Kumir
 
 apt-get install -y libqtgui4 libqt4-svg libqt4-script
 apt-get install -y curl
